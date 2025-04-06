@@ -1,0 +1,6 @@
+services:
+  mcp:
+    build: .
+    network_mode: host
+    volumes:
+      - .:/go/src/github.com/chr0n1x/golang-mcp-playground
