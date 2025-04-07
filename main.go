@@ -37,14 +37,14 @@ func helloHandler(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallTo
 func main() {
 	// Create MCP server
 	s := server.NewMCPServer(
-		"dada demo 🚀",
+		"stdio MCP demo courtesy of mark3labs 🚀",
 		"1.0.0",
 		server.WithLogging(),
 		server.WithPromptCapabilities(true),
 	)
 
-	tool := mcp.NewTool("hello_dada",
-		mcp.WithDescription("Say hello to my dada"),
+	tool := mcp.NewTool("hello_demo",
+		mcp.WithDescription("Say hello to a person as a demo"),
 		mcp.WithString("name",
 			mcp.Required(),
 			mcp.Description("Name of the person to greet"),
@@ -65,7 +65,7 @@ func main() {
 		errC <- stdioServer.Listen(ctx, in, out)
 	}()
 
-	stdioLog("dada mcp server running in stdio")
+	stdioLog("demo MCP server running in stdio")
 
 	// Wait for shutdown signal
 	select {

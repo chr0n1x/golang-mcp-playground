@@ -1,8 +1,8 @@
-# Golang MCP Playground
+# Golang MCP Template
 
-Screwing around with MCP, ollama, via oterm
+Barebones stdio MCP server template running in a docker container.
 
-example oterm config in `~/.local/share/oterm/config.json`
+example `oterm` config in `~/.local/share/oterm/config.json`
 
 ```json
 {
@@ -22,4 +22,6 @@ example oterm config in `~/.local/share/oterm/config.json`
 }
 ```
 
-build the image via `docker compose build`.
+The same `mcpServers` config can be used in CursorAI.
+
+build the image in the command via `docker compose build`.
